@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>聖誕主題</title>
+	<link rel="stylesheet" href="css/common.css"> 
+	<link rel="stylesheet" href="css/pageA.css">
+	<link rel="stylesheet" href="css/pageC.css"> 
+	<link rel="stylesheet" href="css/pageB.css">
+</head>
+<body>
+	<section class="container">
+		<!-- 第一幅画面 -->
+		<section class="page-a bg-adaptive">
+			<!-- 月亮 -->
+            <figure class="moon"></figure>
+            <!-- 圣诞树 -->
+            <figure class="tree"></figure>
+            <!-- 云 -->
+            <figure class="cloudy"></figure>
+            <!-- 男孩 -->
+            <div class="chs-boy chs-boy-deer"></div>
+            <!-- 窗户 -->
+            <div class="window wood">
+                <div class="window-bg"></div>
+                <div class="window-content">
+                    <div class="window-left"></div>
+                    <div class="window-right"></div>
+                </div>
+            </div>
+		</section>
+		<!-- 第二幅画面 -->	
+		<section class="page-b bg-adaptive">
+			<!-- 猫 -->
+            <figure class="cat"></figure>
+            <!-- 小女孩 -->
+            <figure class="girl"></figure>
+			<!-- 圣诞男孩 -->
+            <figure class="christmas-boy-head"></figure>
+            <figure class="christmas-boy boy-walk"> </figure>
+            <!-- 旋转木马 -->
+            <div id="carousel">
+                <figure id="spinner"></figure>
+            </div>
+		</section>
+		<!-- 第三幅画面 -->
+		<section class="page-c bg-adaptive">
+			<!-- 窗户关闭 -->
+            <div class="window wood">
+                <div class="window-content" data-attr="red">
+                    <div class="window-scene-bg"></div>
+                    <div class="window-close-bg"></div>
+                    <div class="window-left hover"></div>
+                    <div class="window-right hover"></div>
+                </div>
+            </div>
+		</section>
+		<!-- 雪花 -->
+        <canvas id="snowflake"></canvas>
+	</section>
+</body>
+
+<script type="text/javascript">
+	/*document.querySelector("#page").addEventListener("change",function(e){
+		var pageName = e.target.value;
+		switch(pageName){
+			case "page-b":
+				  $(".page-a").addClass("effect-out");
+				  break;
+			case "page-c":
+				  $(".page-c").addClass("effect-in");
+				  break;
+		}
+	},false)
+*/
+	//rem设置
+        (function(doc, win) {
+            var docEl = doc.documentElement,
+                resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+                recalc = function() {
+                    var clientWidth = docEl.clientWidth;
+                    if (!clientWidth) return;
+                    docEl.style.fontSize = 20 * (clientWidth / 320) + 'px';
+                    //宽与高度
+                    document.body.style.height = clientWidth * (900 / 1440) + "px"
+                };
+            win.addEventListener(resizeEvt, recalc, false);
+            doc.addEventListener('DOMContentLoaded', recalc, false);
+        })(document, window);
+
+	/**
+	 * 下拉选择页面
+	 * @type {[type]}
+	 
+	 var page = document.querySelector("#page");
+
+	 var index = 5;
+	 page.addEventListener("change",function(e){
+	 	var pageElement = document.querySelector("."+e.target.value);
+	 	pageElement.style.zIndex = ++index;
+	 },false);
+	 */
+</script>
+<script src="http://libs.baidu.com/jquery/1.9.1/jquery.js"></script>
+<script src="js/jquery.transit.js"></script>
+<script src="js/snowflake.js"></script>
+<script src="js/pageA.js"></script>
+<script src="js/christmas.js"></script>
+<script src="js/observer.js"></script>
+<script src="js/pageC.js"></script>
+<script src="js/carousel.js"></script>
+<script src="js/pageB.js"></script>
+</html>
