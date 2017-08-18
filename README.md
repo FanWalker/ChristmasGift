@@ -19,3 +19,8 @@
 7、3d旋转木马的实现；
 
 8、使用canvas实现雪花效果；
+
+
+最终的效果展示：[慕课网学习之H5+JS+CSS3 实现圣诞情缘](http://fanwalker.com/ChristmasGift/index.html)
+
+该效果和慕课网展示的有点偏差，待日后完善！
