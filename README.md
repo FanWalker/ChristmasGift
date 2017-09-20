@@ -16,7 +16,7 @@
 
 6、css3 transform、transition的使用；
 
-7、3d旋转木马的实现；
+7、3d旋转木马的实现：单独实现[demo](http://fanwalker.com/learn/merry-go-round/carousel.html),具体实现过程：[css3实现3D旋转木马](https://github.com/FanWalker/learn)
 
 8、使用canvas实现雪花效果；
 
